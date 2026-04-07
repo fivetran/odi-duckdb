@@ -16,16 +16,17 @@ Connect to a Fivetran Polaris Iceberg Catalog and AWS S3 via DuckDB. Supports tw
 1. **Create a credentials file** — copy `.env_example` to `.env` and fill in your credentials:
 
 ```env
-# Polaris (Fivetran) Iceberg credentials
-ICEBERG_CLIENT_ID='your_id'
-ICEBERG_CLIENT_SECRET='your_secret'
+# Polaris Iceberg Credentials
+ICEBERG_CLIENT_ID='XXX'
+ICEBERG_CLIENT_SECRET='XXX'
 ICEBERG_SCOPE='PRINCIPAL_ROLE:ALL'
 ICEBERG_ENDPOINT='https://XXXXXXXXXXX.aws.polaris.fivetran.com/api/catalog'
+ICEBERG_CATALOG_NAME='XXX'
 
-# AWS S3 credentials
-AWS_ACCESS_KEY_ID='your_aws_key'
-AWS_SECRET_ACCESS_KEY='your_aws_secret'
-AWS_SESSION_TOKEN='your_session_token'
+# AWS S3 Credentials
+AWS_ACCESS_KEY_ID='XXX'
+AWS_SECRET_ACCESS_KEY='XXX'
+AWS_SESSION_TOKEN='XXX'
 AWS_REGION='us-west-2'
 ```
 

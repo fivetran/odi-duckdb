@@ -46,7 +46,7 @@ def setup_duckdb() -> duckdb.DuckDBPyConnection:
     conn.execute(f"SET s3_session_token     = '{os.environ['AWS_SESSION_TOKEN']}';")
     conn.execute(f"SET s3_region            = '{os.environ['AWS_REGION']}';")
     conn.execute("SET s3_url_style = 'vhost';")
-    conn.execute("SET http_keep_alive = false;")
+    conn.execute("SET http_timeout = 30000;")
     conn.execute(
         f"ATTACH '{os.environ['ICEBERG_CATALOG_NAME']}' AS iceberg_catalog "
         "(TYPE iceberg, SECRET iceberg_secret);"
